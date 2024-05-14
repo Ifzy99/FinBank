@@ -1,0 +1,97 @@
+/* body{
+    margin:0;
+    padding:0;
+    overflow: none;
+    background-image: url("./Images/Finbank_logo.png"),
+      url("./Images/soap bubble.png"),
+      linear-gradient(to right, rgb(30 75 115 / 100%), rgb(255 255 255 / 0%));
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom right, left, right;
+} */
+
+#signupPage {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Signup form  */
+::selection {
+  background-color: gray;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 600px;
+  background-image: linear-gradient(to bottom, #424242, #212121);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+.title {
+  color: wheat;
+  margin: 3rem 0;
+  font-size: 2rem;
+}
+.sub-header-text {
+  text-align: left;
+  margin: 20px 0 30px;
+  color: wheat;
+  width: 60%;
+}
+
+.input {
+  margin: 0.5rem 0;
+  padding: 1rem 0.5rem;
+  width: 20rem;
+  background-color: inherit;
+  color: wheat;
+  border: none;
+  outline: none;
+}
+
+.input-box {
+  border-bottom: 1px solid wheat;
+  transition: all 400ms;
+}
+
+.input-box:hover {
+  background-color: #424242;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.password-text {
+  margin: 10px auto;
+  color: wheat;
+}
+
+.btn {
+  height: 3rem;
+  width: 20rem;
+  margin: 2rem 0;
+  background-color: wheat;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  transition: all 400ms;
+  box-shadow: 0 0 10px antiquewhite, 0 0 10px antiquewhite;
+}
+
+.btn:hover {
+  background-color: antiquewhite;
+  box-shadow: none;
+}
+
+@media (max-width: 791px) {
+  .form {
+    width: 400px;
+  }
+}

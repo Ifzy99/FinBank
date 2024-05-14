@@ -5,18 +5,17 @@
 
 body {
   font-family: "Lora", serif;
-  height: 100vh;
+  /* height: 200vh; */
   overflow: none;
   background-image: url("./Images/Finbank_logo.png"),
-  url("./Images/soap bubble.png"),
-  linear-gradient(to right, rgb(30 75 115 / 100%), rgb(255 255 255 / 0%));
-background-repeat: no-repeat, no-repeat, no-repeat;
-background-position: bottom right, left, right;
+    url("./Images/soap bubble.png"),
+    linear-gradient(to right, rgb(30 75 115 / 100%), rgb(255 255 255 / 0%));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom right, left, right;
 }
 
 #homepage {
   position: relative;
-
   width: 100%;
   height: auto;
   display: flex;
@@ -69,9 +68,23 @@ background-position: bottom right, left, right;
   background-color: #2980b9;
 }
 
-
+.goBack {
+  margin: 20px 0;
+  cursor: pointer;
+  color: white;
+}
 
 @media (max-width: 791px) {
+  body {
+    font-family: "Lora", serif;
+    height: 100vh;
+    overflow: none;
+    background-image: url("./Images/Finbank_logo.png"),
+      url("./Images/soap bubble.png"),
+      linear-gradient(to right, rgb(30 75 115 / 100%), rgb(255 255 255 / 0%));
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom right, left, right;
+  }
   .logo {
     display: flex;
     justify-content: center;

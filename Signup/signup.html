@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <!-- CSS Stylsheet Links  -->
+    <link rel="stylesheet" href="/Signup/signup.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Font-awesome Links  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+      integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div id="signupPage">
+      <div class="goBack">
+        <h6 onclick="window.location.href='../index.html'">
+          <i class="fa-solid fa-arrow-left fa-2x"></i>
+        </h6>
+      </div>
+
+      <div class="container">
+        <form class="form" id="signupForm">
+          <p class="title">Signup Form</p>
+          <div class="sub-header-text">Please ensure that the information provided are correct as this will be used for validation</div>
+
+          <input
+            placeholder="Email"
+            class="input-box input"
+            type="email"
+            id="userMail" required=""
+          />
+          <input
+            placeholder="Phone Number"
+            class="input-box input"
+            type="text"
+            id="phoneNum" required=""
+          />
+          <input
+            placeholder="Account Number"
+            class="input-box input"
+            type="text"
+            id="accountNum" required=""
+          />
+          <input
+            placeholder="BVN Number"
+            class="input-box input"
+            type="text"
+            id="bvnNum" required=""
+          />
+          <input
+            placeholder="First Name"
+            class="input-box input"
+            type="text"
+            id="firstName" required=""
+          />
+          <input
+            placeholder="Last Name"
+            class="input-box input"
+            type="text"
+            id="lastName" required=""
+          />
+          <input
+            placeholder="Middle Name"
+            class="input-box input"
+            type="text"
+            id="middleName" required=""
+          />
+          <select class="input-box input" name="" id="gender">
+            <option hidden>Gender</option>
+            <option value="">Male</option>
+            <option value="">Female</option>
+          </select>
+          <input
+            placeholder="Date of Birth"
+            class="input-box input"
+            type="date"
+            id="dob" required=""
+          />
+          <input placeholder="Address" class="input-box input" type="text" id="address" required="" />
+          <input placeholder="City" class="input-box input" type="text" id="city" required="" />
+          <input placeholder="State" class="input-box input" type="text"  id="state" required=""/>
+          <input placeholder="Country" class="input-box input" type="text" id="country" required="" />
+          <select class="input-box input" name="" id="work" required="">
+            <option hidden>Occupation</option>
+            <option value="">Student</option>
+            <option value="">Self-employed</option>
+            <option value="">Employed</option>
+          </select>
+
+          <small class="password-text">Enter password to Login to your FinBank App</small>
+          <input
+            placeholder="Password"
+            class="input-box input"
+            type="text"
+            id="password" required=""
+          />
+
+          <small class="password-text">Enter pin to perform transaction on your FinBank App</small>
+          <input
+            placeholder="Pin"
+            class="input-box input"
+            type="number"
+            id="pin" required=""
+          />
+
+
+          <button class="btn" type="submit">Get Started</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/finBank.js"></script>
+  </body>
+</html>
