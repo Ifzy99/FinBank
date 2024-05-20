@@ -31,93 +31,134 @@
       </div>
 
       <div class="container">
-        <form class="form" id="signupForm">
+        <div class="form">
           <p class="title">Signup Form</p>
-          <div class="sub-header-text">Please ensure that the information provided are correct as this will be used for validation</div>
+          <div class="sub-header-text">
+            Please ensure that the information provided are correct as this will
+            be used for validation
+          </div>
 
           <input
             placeholder="Email"
             class="input-box input"
             type="email"
-            id="userMail" required=""
+            id="userMail"
+            required=""
           />
           <input
             placeholder="Phone Number"
             class="input-box input"
             type="text"
-            id="phoneNum" required=""
+            id="phoneNum"
+            required=""
           />
           <input
             placeholder="Account Number"
             class="input-box input"
             type="text"
-            id="accountNum" required=""
+            id="accountNum"
+            required=""
           />
           <input
             placeholder="BVN Number"
             class="input-box input"
             type="text"
-            id="bvnNum" required=""
+            id="bvnNum"
+            required=""
           />
           <input
             placeholder="First Name"
             class="input-box input"
             type="text"
-            id="firstName" required=""
+            id="firstName"
+            required=""
           />
           <input
             placeholder="Last Name"
             class="input-box input"
             type="text"
-            id="lastName" required=""
+            id="lastName"
+            required=""
           />
           <input
             placeholder="Middle Name"
             class="input-box input"
             type="text"
-            id="middleName" required=""
+            id="middleName"
+            required=""
           />
           <select class="input-box input" name="" id="gender">
             <option hidden>Gender</option>
-            <option value="">Male</option>
-            <option value="">Female</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
           </select>
           <input
             placeholder="Date of Birth"
             class="input-box input"
             type="date"
-            id="dob" required=""
+            id="dob"
+            required=""
           />
-          <input placeholder="Address" class="input-box input" type="text" id="address" required="" />
-          <input placeholder="City" class="input-box input" type="text" id="city" required="" />
-          <input placeholder="State" class="input-box input" type="text"  id="state" required=""/>
-          <input placeholder="Country" class="input-box input" type="text" id="country" required="" />
+          <input
+            placeholder="Address"
+            class="input-box input"
+            type="text"
+            id="address"
+            required=""
+          />
+          <input
+            placeholder="City"
+            class="input-box input"
+            type="text"
+            id="city"
+            required=""
+          />
+          <input
+            placeholder="State"
+            class="input-box input"
+            type="text"
+            id="state"
+            required=""
+          />
+          <input
+            placeholder="Country"
+            class="input-box input"
+            type="text"
+            id="country"
+            required=""
+          />
           <select class="input-box input" name="" id="work" required="">
             <option hidden>Occupation</option>
-            <option value="">Student</option>
-            <option value="">Self-employed</option>
-            <option value="">Employed</option>
+            <option value="Student">Student</option>
+            <option value="Self-employed">Self-employed</option>
+            <option value="Employed">Employed</option>
           </select>
 
-          <small class="password-text">Enter password to Login to your FinBank App</small>
+          <small class="password-text"
+            >Enter password to Login to your FinBank App</small
+          >
           <input
             placeholder="Password"
             class="input-box input"
             type="text"
-            id="password" required=""
+            id="password"
+            required=""
           />
 
-          <small class="password-text">Enter pin to perform transaction on your FinBank App</small>
+          <small class="password-text"
+            >Enter pin to perform transaction on your FinBank App</small
+          >
           <input
             placeholder="Pin"
             class="input-box input"
             type="number"
-            id="pin" required=""
+            id="pin"
+            required=""
           />
 
-
-          <button class="btn" type="submit">Get Started</button>
-        </form>
+          <button class="btn" type="submit" onclick="signUp()">Get Started</button>
+        </div>
       </div>
     </div>
 

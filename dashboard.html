@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./Styles/dashboard.css" />
+  </head>
+  <body>
+    <div class="area">
+      <div class="topArea">
+        <div class="username">
+          <h3 id="userName"></h3>
+        </div>
+        <div class="topIcons">
+          <div>
+            <a href=""> <i class="fa fa-headphones fa-2x"></i></a>
+          </div>
+          <div>
+            <a href=""><i class="fa fa-bell"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="balanceBox">
+        <div class="availBalance p-5">
+          <h6>Available Balance</h6>
+          <h3 id="userAvailableBalance"></h3>
+        </div>
+
+        <div class="acctInfo p-5">
+          <h6>Account Number</h6>
+          <h3 id="userAcctNumber"></h3>
+        </div>
+      </div>
+
+      <div class="transferBox shadow-lg">
+        <div class="transferItems">
+          <div class="areaIcons">
+            <h2><i class="fa fa-user fa-2x"></i></h2>
+          </div>
+          <div class="transferTxt">
+            <h6>To FinBank</h6>
+          </div>
+        </div>
+
+        <div class="transferItems">
+          <div class="areaIcons">
+            <h2><i class="fa fa-user fa-2x"></i></h2>
+          </div>
+          <div class="transferTxt">
+            <h6>To Bank</h6>
+          </div>
+        </div>
+
+        <div class="transferItems">
+          <div class="areaIcons">
+            <h2><i class="fa fa-user fa-2x"></i></h2>
+          </div>
+          <div class="transferTxt">
+            <h6>Withdraw</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="billsBox shadow-lg">
+        <div class="billsItem">
+          <div class="areaIcons">
+            <h2 style="color: yellow;"><i class="fa fa-phone fa-2x"></i></h2>
+          </div>
+          <div class="billsTxt">
+            <h6>Airtime</h6>
+          </div>
+        </div>
+        <div class="billsItem">
+          <div class="areaIcons">
+            <h2 style="color: green;"> <i class="fa fa-mobile fa-2x"></i></h2>
+          </div>
+          <div class="billsTxt">
+            <h6>Data</h6>
+          </div>
+        </div>
+        <div class="billsItem">
+          <div class="areaIcons">
+            <h2 style="color:lightsalmon;"><i class="fa fa-trophy fa-2x"></i></h2>
+          </div>
+          <div class="billsTxt">
+            <h6>Betting</h6>
+          </div>
+        </div>
+        <div class="billsItem">
+          <div class="areaIcons">
+            <h2 style="color: lightseagreen;"> <i class="fa fa-money fa-2x"></i></h2>
+          </div>
+          <div class="billsTxt">
+            <h6>Loan</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-menu">
+      <ul>
+        <li>
+          <a href="https://jbfarrow.com">
+            <i class="fa fa-user fa-2x"></i>
+            <span class="nav-text"> My Accounts </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <i class="fa fa-credit-card fa-2x"></i>
+            <span class="nav-text"> Pay Bills </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <i class="fa fa-mobile fa-2x"></i>
+            <span class="nav-text">Buy Airtime</span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <i class="fa fa-exchange fa-2x"></i>
+            <span class="nav-text">Transfer</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-money fa-2x"></i>
+            <span class="nav-text">Loans </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-book fa-2x"></i>
+            <span class="nav-text">Card Services</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-mobile"></i>
+            <span class="nav-text">Data</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-comments"></i>
+            <span class="nav-text"> Share Experience</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-cogs fa-2x"></i>
+            <span class="nav-text"> Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="logout">
+        <li>
+          <a href="#">
+            <i class="fa fa-power-off fa-2x"></i>
+            <span class="nav-text"> Logout </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script src="finBank.js"></script>
+  </body>
+</html>
