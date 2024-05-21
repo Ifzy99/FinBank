@@ -1,5 +1,5 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-}
+
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 
 
@@ -18,12 +18,13 @@ font-size:20px;
 
 
 .main-menu:hover,nav.main-menu.expanded {
-width:250px;
+width: 150px;
+/* width:250px; */
 overflow:visible;
 }
 
 .main-menu {
-background:#212121;
+/* background:#212121; */
 border-right:1px solid #e5e5e5;
 position:absolute;
 top:0;
@@ -98,6 +99,7 @@ overflow:visible;
 
 a:hover,a:focus {
 text-decoration:none;
+/* width:150px; */
 }
 
 nav {
@@ -114,16 +116,21 @@ margin:0;
 padding:0;
 }
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
-color:#fff;
-background-color:#000000;
+color:#000000;
+
 }
 .area {
-float: left;
-/* background: #e2e2e2; */
-margin-left:5rem;
-width: 100%;
-height: 100%;
+/* float: left; */
+margin-left: 60px; 
+width: calc(100% - 60px); /* Adjust to match initial sidebar width */
+transition: margin-left .05s linear; /* Smooth transition */
 }
+
+.main-menu:hover ~ .area {
+    margin-left: 150px; /* Adjust to match hover sidebar width */
+    width: calc(100% - 150px); /* Adjust to match hover sidebar width */
+}
+
 @font-face {
   font-family: 'Titillium Web';
   font-style: normal;
@@ -133,7 +140,7 @@ height: 100%;
 
 .topArea{
     display:flex;
-    /* justify-content:space-between; */
+    justify-content:space-between;
 }
 
 .topIcons{
@@ -143,7 +150,7 @@ height: 100%;
 
 .balanceBox, .transferBox, .billsBox{
     background:#4D869C;
-    width:90%;
+    width:70%;
     margin:2em auto;
     border-radius:5px 5px;
     display:flex;
@@ -167,5 +174,22 @@ height: 100%;
 }
 .billsBox{
    background:none; 
+}
+
+#footer{
+    background:#4D869C;
+    width:100%;
+    position:fixed;
+    bottom:0;
+    padding:10px;
+    color:white;
+}
+
+.footerContainer{
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
 }
 

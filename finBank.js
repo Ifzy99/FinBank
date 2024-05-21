@@ -2,7 +2,6 @@ const toLogin = () => {
   window.location.href = "login.html";
 };
 
-
 // Function to get user data from local storage or initialize an empty array
 function getUserData() {
   const userData = JSON.parse(localStorage.getItem("userDataList")) || [];
@@ -70,78 +69,77 @@ function signUp() {
   window.location.href = "login.html";
 }
 
-
-
-// LOGIN FUNCTION 
+// LOGIN FUNCTION
 // Function to get user data from local storage
 function getUserData() {
-    return JSON.parse(localStorage.getItem('userDataList')) || [];
+  return JSON.parse(localStorage.getItem("userDataList")) || [];
+}
+
+// Function to handle login
+function login() {
+  const loginEmail = document.getElementById("loginEmail").value;
+  const loginPassword = document.getElementById("loginPassword").value;
+
+  const userData = getUserData();
+
+  const user = userData.find(
+    (user) => user.userMail === loginEmail && user.password === loginPassword
+  );
+
+  const alertContainer = document.getElementById("alert-container");
+  alertContainer.innerHTML = ""; // Clear any previous alert
+
+  if (user) {
+    // Login successful
+    const successAlert = document.createElement("div");
+    successAlert.classList.add("alert", "alert-success");
+    successAlert.textContent = "Login successful!";
+    alertContainer.appendChild(successAlert);
+
+    // Redirect to the dashboard after a short delay
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+      window.onload = function () {
+        displayBalanceAndAccountNumber();
+      };
+    }, 2000);
+  } else {
+    // Login failed
+    const failureAlert = document.createElement("div");
+    failureAlert.classList.add("alert", "alert-danger");
+    failureAlert.textContent = "Invalid email or password.";
+    alertContainer.appendChild(failureAlert);
   }
-  
-  // Function to handle login
-  function login() {
-    const loginEmail = document.getElementById('loginEmail').value;
-    const loginPassword = document.getElementById('loginPassword').value;
-  
-    const userData = getUserData();
-  
-    const user = userData.find(
-      (user) => user.userMail === loginEmail && user.password === loginPassword
+}
+
+function displayBalanceAndAccountNumber() {
+  // Retrieve user data from local storage
+  const userData = JSON.parse(localStorage.getItem("userDataList")) || [];
+  console.log(userData);
+
+  // Check if user data exists
+  if (userData.length > 0) {
+    // Assuming there's only one user, get the first user object
+    const user = userData[0];
+
+    //update username
+    const userName = document.getElementById("userName");
+    if (userName) {
+      userName.innerHTML = `<h3>${user.firstName}</h3>`;
+    }
+
+    // Update available balance
+    const userAvailableBalance = document.getElementById(
+      "userAvailableBalance"
     );
-  
-    const alertContainer = document.getElementById('alert-container');
-    alertContainer.innerHTML = ''; // Clear any previous alert
-  
-    if (user) {
-      // Login successful
-      const successAlert = document.createElement('div');
-      successAlert.classList.add('alert', 'alert-success');
-      successAlert.textContent = 'Login successful!';
-      alertContainer.appendChild(successAlert);
-  
-      // Redirect to the dashboard after a short delay
-      setTimeout(() => {
-        window.location.href = 'dashboard.html';
-        window.onload = function() {
-            displayBalanceAndAccountNumber();
-          };
-      }, 2000); 
-    
-    } else {
-      // Login failed
-      const failureAlert = document.createElement('div');
-      failureAlert.classList.add('alert', 'alert-danger');
-      failureAlert.textContent = 'Invalid email or password.';
-      alertContainer.appendChild(failureAlert);
+    if (userAvailableBalance) {
+      userAvailableBalance.innerHTML = `<h3>${user.balance}</h3>`;
+    }
+
+    // Update account number
+    const userAcctNumber = document.getElementById("userAcctNumber");
+    if (userAcctNumber) {
+      userAcctNumber.innerHTML = `<h3>${user.accountNum}</h3>`;
     }
   }
-
-
-  function displayBalanceAndAccountNumber() {
-    // Retrieve user data from local storage
-    const userData = getUserData();
-  
-    // Check if user data exists
-    if (userData.length > 0) {
-      // Assuming there's only one user, get the first user object
-      const user = userData[0];
-
-      //update username
-      const userName = document.getElementById('userName');
-      if(userName){
-        userName.innerHTML = `<h3>${user.firstName}</h3>`
-      }
-  
-      // Update available balance
-      const userAvailableBalance = document.getElementById('userAvailableBalance');
-      if (userAvailableBalance) {
-         userAvailableBalance.innerHTML =`<h3>${user.balance}</h3>`;
-      }
-  
-      // Update account number
-      const userAcctNumber = document.getElementById('userAcctNumber');
-      if (userAcctNumber) {
-        userAcctNumber = `<h3>${user.accountNum}</h3>`;
-      }
-    }
-  }
+}
