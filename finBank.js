@@ -125,7 +125,7 @@ function displayBalanceAndAccountNumber() {
     //update username
     const userName = document.getElementById("userName");
     if (userName) {
-      userName.innerHTML = `<h3>${user.firstName}</h3>`;
+      userName.innerHTML = `<h3>Hi! ${user.firstName}</h3>`;
     }
 
     // Update available balance

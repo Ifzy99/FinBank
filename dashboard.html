@@ -13,11 +13,11 @@
     ></script>
     <link rel="stylesheet" href="./Styles/dashboard.css" />
   </head>
-  <body>
+  <body onload=" displayBalanceAndAccountNumber()">
     <div class="area">
       <div class="topArea">
         <div class="username">
-          <h3 id="userName">Hi!, </h3>
+          <h3 id="userName"></h3>
         </div>
         <div class="topIcons">
           <div>
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <div class="balanceBox">
+      <div class="balanceBox text-light">
         <div class="availBalance p-5">
           <h6>Available Balance</h6>
           <h3 id="userAvailableBalance"></h3>
@@ -134,7 +134,7 @@
           </a>
         </li>
         <li class="has-subnav">
-          <a href="#">
+          <a href="transfer.html">
             <i class="fa fa-exchange fa-2x"></i>
             <span class="nav-text">Transfer</span>
           </a>

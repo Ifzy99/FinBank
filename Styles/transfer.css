@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#t-header {
+  background-color: #4d869c;
+  color: #fff;
+  padding: 10px;
+  display;
+}
+
+.t-header-text {
+  text-align: center;    
+}
+
+#t-body{
+   margin:3em auto;
+   width:90% ;    
+}
+
+.tItems{
+    display:flex; 
+    justify-content:space-between;
+    padding: 0 20px;
+    background:#EEF7FF;
+    margin: 1em 0;
+}
+
+ .tTxt{
+    display:flex;
+}
+.tTxt h6{
+    margin-top:1em;
+    font-weight:bold;
+}
