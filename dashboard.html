@@ -32,6 +32,15 @@
         </div>
       </div>
 
+      <!-- Modal -->
+      <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Welcome to FinBank!</h2>
+          <p id="welcomeMessage"></p>
+        </div>
+      </div>
+
       <div class="balanceBox text-light">
         <div class="availBalance p-5">
           <h6>Available Balance</h6>
@@ -45,7 +54,7 @@
       </div>
 
       <div class="transferBox shadow-lg">
-        <div class="transferItems">
+        <div class="transferItems" onclick="window.location.href='/toFinBank.html'">
           <div class="areaIcons">
             <h2><i class="fa fa-user fa-2x"></i></h2>
           </div>
@@ -183,7 +192,7 @@
 
     <footer id="footer">
       <div class="footerContainer">
-        <div class="footerItems">
+        <div class="footerItems" onclick="window.location.href='/dashboard.html'">
           <div class="Icons">
             <h3><i class="fa fa-home fa-2x"></i></h3>
           </div>
