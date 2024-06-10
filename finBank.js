@@ -157,7 +157,7 @@ function login() {
     // Redirect to the dashboard after a short delay
     setTimeout(() => {
       window.location.href = "dashboard.html";
-    }, 2000); // 2000 milliseconds = 2 seconds
+    }, 2000); 
   } else {
     // Login failed
     const failureAlert = document.createElement("div");

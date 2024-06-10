@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#pageHeader {
+  background-color: #4d869c;
+  color: #fff;
+  padding: 10px;
+}
+
+#t-body {
+  margin: 3em auto;
+  width: 90%;
+}
+
+.tItems {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  background: #eef7ff;
+  margin: 1em 0;
+}
+
+.tTxt {
+  display: flex;
+}
+.tTxt h6 {
+  margin-top: 1em;
+  font-weight: bold;
+}
