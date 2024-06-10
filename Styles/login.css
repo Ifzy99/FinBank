@@ -1,16 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 200vh;
+  overflow: none;
+  background-image: url("./Images/Finbank_logo.png"),
+    url("./Images/soap bubble.png"),
+    linear-gradient(to right, rgb(30 75 115 / 100%), rgb(255 255 255 / 0%));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom right, left, right;
+}
+
 #loginPage {
   width: 90%;
   margin: 0 auto;
 }
 
+.goBack {
+  margin: 20px 0;
+  cursor: pointer;
+  color: white;
+}
+
 .login-menu {
-  width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  padding: 4% 9%;
-  justify-content: center;
+  display: none;
 }
 
 .login-menu-items {
@@ -42,7 +54,7 @@
 /* Login Form  */
 .login-box {
   position: absolute;
-  top: 150%;
+  top: 50%;
   left: 50%;
   width: 300px;
   padding: 40px;
@@ -51,6 +63,7 @@
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  margin-top: 20px;
 }
 
 .login-box .user-box {
@@ -144,7 +157,12 @@
   }
   .login-menu {
     width: 95%;
-    margin: 1rem auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 4% 9%;
+    justify-content: center;
   }
 
   .login-menu-items {
@@ -157,7 +175,7 @@
 
   .login-box {
     position: absolute;
-    top: 80%;
+    top: 90%;
     left: 50%;
     width: 300px;
     padding: 40px;

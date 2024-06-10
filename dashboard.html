@@ -16,18 +16,20 @@
   <body onload=" displayBalanceAndAccountNumber()">
     <div class="area">
       <div class="topArea">
-        <div class="username" style="color: #373A40;">
+        <div class="username" style="color: #373a40">
           <h3 id="userName"></h3>
         </div>
         <div class="topIcons">
           <div>
-            <a href="customerService.html"> <i class="fa fa-headphones fa-2x"></i></a>
+            <a href="customerService.html">
+              <i class="fa fa-headphones fa-2x"></i
+            ></a>
           </div>
           <div>
             <a href="notifications.html"><i class="fa fa-bell"></i></a>
           </div>
           <div>
-            <a href=""><i class="fa fa-clock-o"></i></a>
+            <a href="transactions.html"><i class="fa fa-clock-o"></i></a>
           </div>
         </div>
       </div>
@@ -54,7 +56,10 @@
       </div>
 
       <div class="transferBox shadow-lg">
-        <div class="transferItems" onclick="window.location.href='/toFinBank.html'">
+        <div
+          class="transferItems"
+          onclick="window.location.href='/toFinBank.html'"
+        >
           <div class="areaIcons">
             <h2><i class="fa fa-user fa-2x"></i></h2>
           </div>
@@ -63,7 +68,10 @@
           </div>
         </div>
 
-        <div class="transferItems"  onclick="window.location.href='/toOtherBanks.html'">
+        <div
+          class="transferItems"
+          onclick="window.location.href='/toOtherBanks.html'"
+        >
           <div class="areaIcons">
             <h2><i class="fa fa-user fa-2x"></i></h2>
           </div>
@@ -119,6 +127,85 @@
             <h6>Loan</h6>
           </div>
         </div>
+      </div>
+
+      <!-- Carousel -->
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-caption">
+              <h2>Welcome to Our Website</h2>
+              <p>Discover the best products and services.</p>
+            </div>
+            <div
+              class="carousel-image"
+            ></div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <h2>Experience the Quality</h2>
+              <p>Unmatched quality and customer satisfaction.</p>
+            </div>
+            <div
+              class="carousel-image"
+              style="background-image: url('./Images/man-smiling.jpg')"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <h2>Innovative Solutions</h2>
+              <p>Cutting-edge technology and innovative solutions.</p>
+            </div>
+            <div
+              class="carousel-image"
+              style="background-image: url('./Images/hands-shaking.jpg')"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <!-- <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button> -->
       </div>
     </div>
 
@@ -192,7 +279,10 @@
 
     <footer id="footer">
       <div class="footerContainer">
-        <div class="footerItems" onclick="window.location.href='/dashboard.html'">
+        <div
+          class="footerItems"
+          onclick="window.location.href='/dashboard.html'"
+        >
           <div class="Icons">
             <h3><i class="fa fa-home fa-2x"></i></h3>
           </div>

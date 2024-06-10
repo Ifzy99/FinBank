@@ -195,6 +195,59 @@ nav.main-menu li.active > a,
   background: none;
 }
 
+/* Carousel */
+.carousel {
+  position: relative;
+  width: 85%;
+  margin: 5em auto;
+  height: 700px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+  height: 100%;
+}
+.carousel-item:first-child {
+  background-image: url("../Images/Finbank_logo.png"),
+    url("../Images/soap bubble.png"),
+    linear-gradient(to right, rgb(30 75 115 / 100%), rgb(255 255 255 / 0%));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom right, left, right;
+  /* Add any additional styles you need, such as height, padding, etc. */
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.carousel-caption h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+}
+/* Carousel  */
+
 #footer {
   background: #4d869c;
   width: 100%;
