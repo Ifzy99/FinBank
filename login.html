@@ -113,7 +113,7 @@
         </div>
       </div>
 
-      <div class="login-box">
+      <!-- <div class="login-box">
         <div id="alert-container"></div>
         <div>
           <div class="user-box">
@@ -133,8 +133,25 @@
 
           <div class="text-light mt-4">Don't have account? <span onclick="window.location.href='signup.html'" class="span text-primary">Sign-Up</span></div>
         </div>
+        </div> -->
+
+      <section class="section_form">
+        <div class="feed-form">
+          <div id="alert-container"></div>
+          <input name="email" required="" placeholder="E-mail" type="email" id="loginEmail" />
+          <input name="password" required="" placeholder="Password" id="loginPassword" />
+          <button onclick="login()" class="button_submit">LOG IN</button>
+
+          <div class="text-light mt-4">
+            Don't have account?
+            <span
+              onclick="window.location.href='signup.html'"
+              class="span text-primary"
+              >Sign-Up</span
+            >
+          </div>
         </div>
-      </div>
+      </section>
     </div>
 
     <script src="finBank.js"></script>
