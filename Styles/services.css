@@ -1,0 +1,121 @@
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  .header {
+    background-color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .back-button {
+    color:#576b97;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  .title {
+    color: #576b97;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .mode-toggle {
+    color: #576b97;
+    font-size: 24px;
+  }
+  .services {
+    padding: 20px;
+  }
+  .service-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .service-details {
+    flex-grow: 1;
+  }
+  .service-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .service-description {
+    color: #666;
+    font-size: 14px;
+  }
+  .arrow {
+    color: #576b97;
+    font-size: 20px;
+  }
+  .banner {
+    background-color: #576b97;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .banner h2 {
+    margin-top: 0;
+  }
+  .banner ul {
+    padding-left: 20px;
+  }
+
+  /* Footer styles */
+#footer {
+    background: #4d869c;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 5px 0;
+    color: white;
+  }
+  
+  .footerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  
+  .fa-2x {
+    font-size: 1.5em;
+  }
+  
+  .fa {
+    display: block;
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .footerItems {
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footerItems h6 {
+    margin: 2px 0 0;
+    font-size: 12px;
+  }
+  
+  .Icons h3 {
+    margin-top: 10px;
+  }
