@@ -4,187 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FinBank Cards</title>
-    <style>
-      @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-
-      @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
-
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-      }
-      .container {
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-      .header h1 {
-        font-size: 24px;
-        margin: 0;
-      }
-      .qa-button {
-        color: #4d7fa2;
-        font-weight: bold;
-      }
-      .card-container {
-        background-color: white;
-        border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .card-tabs {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-      }
-      .card-tab {
-        flex: 1;
-        text-align: center;
-        padding: 10px;
-        cursor: pointer;
-        border-bottom: 2px solid transparent;
-      }
-      .card-tab.active {
-        border-bottom-color: #365774;
-        color: #00a86b;
-      }
-      .card {
-        background: linear-gradient(45deg, #4a0e8f, #1976d2);
-        border-radius: 10px;
-        padding: 20px;
-        color: white;
-        position: relative;
-        overflow: hidden;
-        height: 200px;
-      }
-      .card::before {
-        content: "";
-        position: absolute;
-        top: -50px;
-        right: -50px;
-        background-color: rgba(255, 255, 255, 0.1);
-        height: 220px;
-        width: 220px;
-        border-radius: 50%;
-      }
-      .card-logo {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 20px;
-      }
-      .card-number {
-        font-size: 18px;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
-      }
-      .card-type {
-        font-size: 14px;
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-      }
-      .card-network {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        font-style: italic;
-      }
-      .show-details {
-        background-color: #a3a5ba;
-        color: #fff;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 20px;
-        width: 100%;
-      }
-      .forgot-pin {
-        background-color: #a3a5ba;
-        color: #fff;
-        padding: 15px;
-        border-radius: 10px;
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .view-btn {
-        background-color: #667bc6;
-        color: white;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .manage-options {
-        margin-top: 20px;
-      }
-      .option {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 0;
-        border-bottom: 1px solid #eee;
-      }
-
-      /* Footer styles */
-      #footer {
-        background: #4d869c;
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-        padding: 5px 0;
-        color: white;
-      }
-
-      .footerContainer {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        text-align: center;
-      }
-
-      .fa-2x {
-        font-size: 1.5em;
-      }
-
-      .fa {
-        display: block;
-        width: auto;
-        height: 30px;
-        text-align: center;
-        font-size: 18px;
-      }
-
-      .footerItems {
-        cursor: pointer;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .footerItems h6 {
-        margin: 2px 0 0;
-        font-size: 12px;
-      }
-
-      .Icons h3 {
-        margin-top: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="./Styles/cards.css">
   </head>
   <body>
+    
     <div class="container">
       <div class="header">
         <h1>Cards</h1>
@@ -247,7 +70,7 @@
           >
             <div class="card-logo">FinBank</div>
             <div class="card-number">507872******7216</div>
-            <div class="card-type">Virtual Card</div>
+            <div class="card-type">Physical Card</div>
             <div class="card-network">Verve</div>
           </div>
 
@@ -304,7 +127,7 @@
             <h6>Cards</h6>
           </div>
         </div>
-        <div class="footerItems">
+        <div class="footerItems" onclick="window.location.href='/more.html'">
           <div class="Icons">
             <i class="fa fa-ellipsis-h fa-2x"></i>
           </div>
