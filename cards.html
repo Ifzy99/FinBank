@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinBank Cards</title>
+    <style>
+      @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+      @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .header h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+      .qa-button {
+        color: #4d7fa2;
+        font-weight: bold;
+      }
+      .card-container {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .card-tabs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .card-tab {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+      }
+      .card-tab.active {
+        border-bottom-color: #365774;
+        color: #00a86b;
+      }
+      .card {
+        background: linear-gradient(45deg, #4a0e8f, #1976d2);
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        background-color: rgba(255, 255, 255, 0.1);
+        height: 220px;
+        width: 220px;
+        border-radius: 50%;
+      }
+      .card-logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .card-number {
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+      .card-type {
+        font-size: 14px;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+      }
+      .card-network {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-style: italic;
+      }
+      .show-details {
+        background-color: #a3a5ba;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        width: 100%;
+      }
+      .forgot-pin {
+        background-color: #a3a5ba;
+        color: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .view-btn {
+        background-color: #667bc6;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .manage-options {
+        margin-top: 20px;
+      }
+      .option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      /* Footer styles */
+      #footer {
+        background: #4d869c;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        padding: 5px 0;
+        color: white;
+      }
+
+      .footerContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+      }
+
+      .fa-2x {
+        font-size: 1.5em;
+      }
+
+      .fa {
+        display: block;
+        width: auto;
+        height: 30px;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .footerItems {
+        cursor: pointer;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .footerItems h6 {
+        margin: 2px 0 0;
+        font-size: 12px;
+      }
+
+      .Icons h3 {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Cards</h1>
+        <span class="qa-button">Q&A</span>
+      </div>
+      <div class="card-container">
+        <div class="card-tabs">
+          <div class="card-tab active" onclick="showCard('virtual')">
+            Virtual Card
+          </div>
+          <div class="card-tab" onclick="showCard('physical')">
+            Physical Card
+          </div>
+        </div>
+
+        <div id="virtualCard">
+          <div class="card">
+            <div class="card-logo">FinBank</div>
+            <div class="card-number">507872******7216</div>
+            <div class="card-type">Virtual Card</div>
+            <div class="card-network">Verve</div>
+          </div>
+
+          <button class="show-details">Show Details ></button>
+
+          <div class="forgot-pin">
+            <div>
+              <h3>Forgot Card PIN?</h3>
+              <p>Reset your PIN here</p>
+            </div>
+            <button class="view-btn">View</button>
+          </div>
+
+          <div class="manage-options">
+            <div class="option">
+              <span>Manage Card</span>
+              <span>></span>
+            </div>
+            <div class="option">
+              <span>Manage Dispute</span>
+              <span>></span>
+            </div>
+            <div class="option">
+              <span>Change Card Design</span>
+              <span>></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="physicalCard" style="display: none">
+          <div
+            class="card"
+            style="
+              background: linear-gradient(
+                to right,
+                rgb(30 75 115 / 100%),
+                rgb(255 255 255 / 0%)
+              );
+            "
+          >
+            <div class="card-logo">FinBank</div>
+            <div class="card-number">507872******7216</div>
+            <div class="card-type">Virtual Card</div>
+            <div class="card-network">Verve</div>
+          </div>
+
+          <button class="show-details">Show Details ></button>
+
+          <div class="forgot-pin">
+            <div>
+              <h3>Forgot Card PIN?</h3>
+              <p>Reset your PIN here</p>
+            </div>
+            <button class="view-btn">View</button>
+          </div>
+
+          <div class="manage-options">
+            <div class="option">
+              <span>Manage Card</span>
+              <span>></span>
+            </div>
+            <div class="option">
+              <span>Manage Dispute</span>
+              <span>></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footerContainer">
+        <div
+          class="footerItems"
+          onclick="window.location.href='/dashboard.html'"
+        >
+          <div class="Icons">
+            <i class="fa fa-home fa-2x"></i>
+          </div>
+          <div class="footerTxt">
+            <h6>Home</h6>
+          </div>
+        </div>
+        <div class="footerItems">
+          <div class="Icons">
+            <i class="fa fa-cogs fa-2x"></i>
+          </div>
+          <div class="footerTxt">
+            <h6>Services</h6>
+          </div>
+        </div>
+        <div class="footerItems" onclick="window.location.href='/cards.html'">
+          <div class="Icons">
+            <i class="fa fa-credit-card fa-2x"></i>
+          </div>
+          <div class="footerTxt">
+            <h6>Cards</h6>
+          </div>
+        </div>
+        <div class="footerItems">
+          <div class="Icons">
+            <i class="fa fa-ellipsis-h fa-2x"></i>
+          </div>
+          <div class="footerTxt">
+            <h6>More</h6>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function showCard(cardType) {
+        document.getElementById("virtualCard").style.display =
+          cardType === "virtual" ? "block" : "none";
+        document.getElementById("physicalCard").style.display =
+          cardType === "physical" ? "block" : "none";
+
+        document.querySelectorAll(".card-tab").forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        event.target.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
