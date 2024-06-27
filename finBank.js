@@ -2,13 +2,11 @@ const toLogin = () => {
   window.location.href = "login.html";
 };
 
-
 function hasSeenWelcomeModal() {
-    return localStorage.getItem('seenWelcomeModal') === 'true';
-  }
+  return localStorage.getItem("seenWelcomeModal") === "true";
+}
 
-
-       //   <!--SIGN UP FUNCTION--->
+//   <!--SIGN UP FUNCTION--->
 // Function to get user data from local storage or initialize an empty array
 function getUserData() {
   const userData = JSON.parse(localStorage.getItem("userDataList")) || [];
@@ -157,7 +155,7 @@ function login() {
     // Redirect to the dashboard after a short delay
     setTimeout(() => {
       window.location.href = "dashboard.html";
-    }, 2000); 
+    }, 2000);
   } else {
     // Login failed
     const failureAlert = document.createElement("div");
@@ -183,8 +181,8 @@ function showWelcomeModal(userName) {
   // Close the modal when the user clicks the close button
   span.onclick = function () {
     modal.style.display = "none";
-     // Set the seenWelcomeModal flag in local storage
-     localStorage.setItem('seenWelcomeModal', 'true');
+    // Set the seenWelcomeModal flag in local storage
+    localStorage.setItem("seenWelcomeModal", "true");
   };
 
   // Close the modal when the user clicks outside the modal
@@ -192,7 +190,7 @@ function showWelcomeModal(userName) {
     if (event.target == modal) {
       modal.style.display = "none";
       // Set the seenWelcomeModal flag in local storage
-      localStorage.setItem('seenWelcomeModal', 'true');
+      localStorage.setItem("seenWelcomeModal", "true");
     }
   };
 }
@@ -202,9 +200,9 @@ window.onload = function () {
   displayBalanceAndAccountNumber();
   const userData = getUserData();
   const user = userData[0];
-  
-   // Check if the user has seen the welcome modal before
-   if (!hasSeenWelcomeModal()) {
+
+  // Check if the user has seen the welcome modal before
+  if (!hasSeenWelcomeModal()) {
     showWelcomeModal(user.firstName);
   }
 };
@@ -224,6 +222,52 @@ function displayBalanceAndAccountNumber() {
     const userName = document.getElementById("userName");
     if (userName) {
       userName.innerHTML = `<h3>Hi! ${user.firstName}</h3>`;
+    }
+
+    //update fullname
+    const fullname = document.getElementById("fullname");
+    if (fullname) {
+      fullname.innerHTML = `<h3>${user.firstName} ${user.lastName}</h3>`;
+    }
+
+    // Get the initials
+const firstNameInitial = user.firstName.charAt(0).toUpperCase();
+const lastNameInitial = user.lastName.charAt(0).toUpperCase();
+
+// Update the fullname element with the initials
+const userInitials = document.getElementById("userInitials");
+if (userInitials) {
+  userInitials.innerHTML = `<h3>${firstNameInitial}${lastNameInitial}</h3>`;
+}
+
+    //update firstname
+    const userFirstName = document.getElementById("userFirstName");
+    if (userFirstName) {
+      userFirstName.innerHTML = `<h4> ${user.firstName}</h4>`;
+    }
+
+    //update lastname
+    const userLastName = document.getElementById("userLastName");
+    if (userLastName) {
+      userLastName.innerHTML = `<h4> ${user.lastName}</h4>`;
+    }
+
+    //update Mail
+    const userEmail = document.getElementById("userEmail");
+    if (userEmail) {
+      userEmail.innerHTML = `<h4> ${user.userMail}</h4>`;
+    }
+
+    //update Date of Birth
+    const dateOfBirth = document.getElementById("dateOfBirth");
+    if (dateOfBirth) {
+      dateOfBirth.innerHTML = `<h4> ${user.dob}</h4>`;
+    }
+
+       //update user Contact
+    const userContact = document.getElementById("userContact");
+    if (userContact) {
+      userContact.innerHTML = `<h4> ${user.phoneNum}</h4>`;
     }
 
     // Update available balance

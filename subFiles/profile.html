@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/Styles/profile.css">
+</head>
+<body onload=" displayBalanceAndAccountNumber()">
+    <div class="container">
+        <div class="back-arrow" onclick="window.location.href='/dashboard.html'">←</div>
+        <div class="profile-header">
+            <div class="profile-info">
+                <h1 id="fullname"></h1>
+                <p id="userEmail"></p>
+            </div>
+            <div class="profile-image" id="userInitials"></div>
+        </div>
+        
+        <div class="section-title">PERSONAL DETAILS</div>
+        
+        <div class="details">
+            <div class="detail-row">
+                <span class="detail-label">First Name</span>
+                <span class="detail-value" id="userFirstName"></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Last Name</span>
+                <span class="detail-value" id="userLastName"></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Date of birth</span>
+                <span class="detail-value" id="dateOfBirth"></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Phone Number</span>
+                <span class="detail-value" id="userContact"></span>
+            </div>
+        </div>
+        
+        <div class="tag">
+            <img src="/Images/Finbank_logo.png" alt="logo">
+        </div>
+        
+        
+        <div class="delete-account">Delete Account</div>
+    </div>
+
+    <script src="/finBank.js"></script>
+</body>
+</html>
