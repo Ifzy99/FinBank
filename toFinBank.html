@@ -23,7 +23,13 @@
     <section id="pageHeader">
       <div class="pageHeaderTxt">
         <h6>
-          <span ><i class="fa fa-arrow-left me-3" style="cursor: pointer;" onclick="window.location.href='/dashboard.html'" ></i></span>
+          <span
+            ><i
+              class="fa fa-arrow-left me-3"
+              style="cursor: pointer"
+              onclick="window.location.href='/dashboard.html'"
+            ></i
+          ></span>
           Transfer to FinBank Account
         </h6>
       </div>
@@ -46,14 +52,16 @@
           <input type="text" placeholder="" id="amount" />
         </div>
         <div class="inputBox">
-          <label for="remarks">Remarks</label>
+          <label for="remarks">Remarks(Optional)</label>
           <i class="fa fa-comment"></i>
           <input type="text" placeholder="" id="remarks" />
         </div>
         <div class="inputBox">
-          <button class="button mx-auto">Confirm</button>
+          <button class="button mx-auto" onclick="finBankTransfer()">Continue</button>
         </div>
       </div>
     </section>
+
+    <script src="/finBank.js"></script>
   </body>
 </html>

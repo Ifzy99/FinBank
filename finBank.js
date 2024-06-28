@@ -195,16 +195,18 @@ function showWelcomeModal(userName) {
   };
 }
 
-// Call the showWelcomeModal function after the displayBalanceAndAccountNumber function
+//This is to Call the showWelcomeModal function after the displayBalanceAndAccountNumber function
 window.onload = function () {
   displayBalanceAndAccountNumber();
   const userData = getUserData();
   const user = userData[0];
 
-  // Check if the user has seen the welcome modal before
+  //To check if the user has seen the welcome modal before
   if (!hasSeenWelcomeModal()) {
     showWelcomeModal(user.firstName);
   }
+
+   updateContinueButton();
 };
 
 //  FUNCTION TO DISPLAY BALANCE AND ACCOUNT DETAILS
@@ -285,3 +287,65 @@ if (userInitials) {
     }
   }
 }
+
+
+function finBankTransfer() {
+  const receipentAcct = document.getElementById('receipentAcctDetails').value;
+  const amount = parseFloat(document.getElementById('amount').value);
+  const remarks = document.getElementById('remarks').value;
+
+  // Get user data from local storage
+  const userData = JSON.parse(localStorage.getItem('userDataList')) || [];
+  const currentUser = userData[0]; // Assuming the first user is the current user
+
+  if (!receipentAcct || isNaN(amount) || amount <= 0) {
+    alert('Please enter valid account details and amount.');
+    return;
+  }
+
+  if (amount > currentUser.balance) {
+    alert('Insufficient balance for this transfer.');
+    return;
+  }
+
+  // Create transfer object
+  const transferDetails = {
+    receipentAccount: receipentAcct,
+    amount: amount,
+    remarks: remarks,
+    date: new Date().toISOString()
+  };
+
+  // Add transfer to user's history
+  currentUser.transferHistory.push(transferDetails);
+
+  // Update user's balance
+  currentUser.balance -= amount;
+
+  // Update local storage
+  localStorage.setItem('userDataList', JSON.stringify(userData));
+
+  // alert('Transfer successful!');
+  // Optionally, redirect to another page or clear the form
+  window.location.href = '/subFiles/reviewTransfer.html';
+}
+
+// Function to enable/disable the Continue button based on input
+function updateContinueButton() {
+  const amount = parseFloat(document.getElementById('amount').value);
+  const continueButton = document.querySelector('.button');
+  const userData = JSON.parse(localStorage.getItem('userDataList')) || [];
+  const currentUser = userData[0];
+
+  if (!isNaN(amount) && amount > 0 && amount <= currentUser.balance) {
+    continueButton.disabled = false;
+  } else {
+    continueButton.disabled = true;
+  }
+}
+
+// Add event listener to amount input
+document.getElementById('amount').addEventListener('input', updateContinueButton);
+
+// Initial call to set button state
+updateContinueButton();
