@@ -1,12 +1,11 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  #pageHeader {
-    background-color: #4d869c;
-    color: #fff;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
+  margin: 0;
+  padding: 0;
+}
+#pageHeader {
+  background-color: #4d869c;
+  color: #fff;
+  padding: 10px;
+  top: 0;
+  width: 100%;
+}

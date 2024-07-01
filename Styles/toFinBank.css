@@ -14,6 +14,26 @@ body {
 #pageBody {
   margin: 3em 0;
 }
+
+/* MESSAGE DIV  */
+.message-container {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.error-message {
+  background-color: #ffcccc;
+  color: #cc0000;
+}
+
+.success-message {
+  background-color: #ccffcc;
+  color: #006600;
+}
+/* MESSAGE DIV  */
+
+
 .transferDetailsContainer {
   width: 90;
   margin: 0 auto;

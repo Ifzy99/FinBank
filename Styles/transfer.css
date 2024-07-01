@@ -1,35 +1,73 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
-#t-header {
+
+.header {
   background-color: #4d869c;
+  padding: 15px;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
   color: #fff;
-  padding: 10px;
-  display;
+}
+.back-button {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
 }
 
-.t-header-text {
-  text-align: center;    
+.services {
+  padding: 20px;
+}
+.service-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.service-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.service-details {
+  flex-grow: 1;
+}
+.service-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.service-description {
+  color: #666;
+  font-size: 14px;
+}
+.arrow {
+  color: #576b97;
+  font-size: 20px;
 }
 
-#t-body{
-   margin:3em auto;
-   width:90% ;    
+/* #t-body {
+  margin: 3em auto;
+  width: 90%;
 }
 
-.tItems{
-    display:flex; 
-    justify-content:space-between;
-    padding: 0 20px;
-    background:#EEF7FF;
-    margin: 1em 0;
+.tItems {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: #eef7ff;
+  margin: 1em 0;
 }
 
- .tTxt{
-    display:flex;
+.tTxt {
+  display: flex;
 }
-.tTxt h6{
-    margin-top:1em;
-    font-weight:bold;
-}
+.tTxt h6 {
+  margin-top: 1em;
+  font-weight: bold;
+} */

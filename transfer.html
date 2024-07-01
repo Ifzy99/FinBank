@@ -20,49 +20,29 @@
     <link rel="stylesheet" href="./Styles/transfer.css" />
   </head>
   <body>
-    <section id="t-header">
-      <div class="t-header-text">
-        <h4>Send Money</h4>
-      </div>
-    </section>
+    <div class="header">
+      <a href="/dashboard.html" class="back-button">&#10094;</a>
+      <span class="title fs-5 ms-3">Transfer</span>
+    </div>
 
-    <section id="t-body">
-      <div class="transferCont">
-        <div class="tItems" onclick="window.location.href='./toFinBank.html'">
-          <div class="tTxt">
-            <div class="tImg">
-              <img
-                src="./Images/Finbank_logo.png"
-                style="width: 50px"
-                alt="finBank logo"
-              />
-            </div>
-            <h6 class="">To FinBank</h6>
-          </div>
-          <div class="tIcon">
-            <h3 class="mt-2">
-              <i class="fa-thin fa-greater-than text-secondary"></i>
-            </h3>
-          </div>
+    <div class="services">
+      <div class="service-item shadow" onclick="window.location.href='./toFinBank.html'">
+        <img src="/Images/Finbank_logo.png" alt="Airtime" class="service-icon" />
+        <div class="service-details">
+          <div class="service-title">To FinBank</div>
+          <div class="service-description">Transfers within FinBank accounts</div>
         </div>
-        <div class="tItems" onclick="window.location.href='./toOtherBanks.html'">
-          <div class="tTxt">
-            <div class="tImg">
-              <img
-                src="./Images/paper_plane_PNG81.png"
-                style="width: 50px"
-                alt="finBank logo"
-              />
-            </div>
-            <h6>To Banks</h6>
-          </div>
-          <div class="tIcon">
-            <h3 class="mt-2">
-              <i class="fa-thin fa-greater-than text-secondary"></i>
-            </h3>
-          </div>
-        </div>
+        <div class="arrow">&#10095;</div>
       </div>
-    </section>
+      <div class="service-item shadow" onclick="window.location.href='./toOtherBanks.html'">
+        <img src="/Images/paper_plane_PNG81.png" alt="Airtime" class="service-icon" />
+        <div class="service-details">
+          <div class="service-title">To Banks</div>
+          <div class="service-description">Transfers to Other banks</div>
+        </div>
+        <div class="arrow">&#10095;</div>
+      </div>
+    </div>
+
   </body>
 </html>

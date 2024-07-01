@@ -3,10 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>'
-    <link rel="stylesheet" href="./Styles/test.css">
+    <title>Transaction Receipt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Styles/transactions.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .receipt-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .transaction-icon {
+            font-size: 48px;
+            color: #8a2be2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+    </style>
 </head>
-<body>
-    
+<body onload="displayTransactionReceipt()">
+    <section id="pageHeader">
+        <div class="pageHeaderTxt">
+            <h6>
+                <span><i class="fa fa-arrow-left me-3" style="cursor: pointer" onclick="window.history.back()"></i></span>
+                Transaction Receipt
+            </h6>
+        </div>
+    </section>
+    <div class="receipt-container">
+        <div class="transaction-icon">
+            <i class="fas fa-exchange-alt"></i>
+        </div>
+        <h2 id="transactionTitle"></h2>
+        <h1 id="amount" class="text-center mb-3"></h1>
+        <p class="status text-center text-success"><i class="fas fa-check-circle"></i> Successful</p>
+        <div id="receiptDetails"></div>
+        <button class="btn btn-primary mt-4 w-100" onclick="downloadReceipt()">Download Receipt</button>
+    </div>
+    <script src="/finBank.js"></script>
+    <script>
+    function displayTransactionReceipt() {
+        const transaction = JSON.parse(localStorage.getItem('selectedTransaction'));
+        if (!transaction) {
+            displayMessage('Transaction details not found.', true);
+            return;
+        }
+
+        document.getElementById('transactionTitle').textContent = `${transaction.transactionType || 'Transfer'} ${transaction.senderName ? 'from ' + transaction.senderName : 'to ' + transaction.receipentAccount}`;
+        document.getElementById('amount').textContent = `₦${transaction.amount.toFixed(2)}`;
+
+        const receiptDetails = document.getElementById('receiptDetails');
+        receiptDetails.innerHTML = `
+            <div class="detail-row"><span>Transaction ID:</span><span>${transaction.transactionId}</span></div>
+            <div class="detail-row"><span>Date:</span><span>${new Date(transaction.date).toLocaleString()}</span></div>
+            <div class="detail-row"><span>Sender Name:</span><span>${transaction.senderName || 'N/A'}</span></div>
+            <div class="detail-row"><span>Sender Account:</span><span>${transaction.senderAccount || 'N/A'}</span></div>
+            <div class="detail-row"><span>Recipient Account:</span><span>${transaction.receipentAccount}</span></div>
+            <div class="detail-row"><span>Remarks:</span><span>${transaction.remarks || 'N/A'}</span></div>
+        `;
+    }
+
+    function downloadReceipt() {
+        const transaction = JSON.parse(localStorage.getItem('selectedTransaction'));
+        let receiptContent = `Transaction Receipt\n\n`;
+        receiptContent += `Transaction Type: ${transaction.transactionType || 'Transfer'}\n`;
+        receiptContent += `Amount: ₦${transaction.amount.toFixed(2)}\n`;
+        receiptContent += `Date: ${new Date(transaction.date).toLocaleString()}\n`;
+        receiptContent += `Transaction ID: ${transaction.transactionId}\n`;
+        receiptContent += `Sender Name: ${transaction.senderName || 'N/A'}\n`;
+        receiptContent += `Sender Account: ${transaction.senderAccount || 'N/A'}\n`;
+        receiptContent += `Recipient Account: ${transaction.receipentAccount}\n`;
+        receiptContent += `Remarks: ${transaction.remarks || 'N/A'}\n`;
+        receiptContent += `Status: Successful`;
+
+        const blob = new Blob([receiptContent], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `receipt_${transaction.transactionId}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+    </script>
 </body>
 </html>
