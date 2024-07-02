@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transfer</title>
+    <link rel="stylesheet" href="/Styles/deposit.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Transfer</h1>
+        <p>Top up your FinBank account by transferring to your NGN Bank account</p>
+        
+        <div class="account-details">
+            <h2>Your FinBank account details</h2>
+            <div class="detail-row">
+                <span class="detail-label">Account Holder</span>
+                <span class="detail-value" id="accountHolder"></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Account number:</span>
+                <span class="detail-value" id="accountNumber"></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Bank name:</span>
+                <span class="detail-value">FinBank</span>
+            </div>
+        </div>
+        
+        
+        
+        <div class="note-box">
+            <h3>PLEASE NOTE:</h3>
+            <ul>
+                <li>The account can only receive funds in Nigerian Naira (NGN).</li>
+                <li>Payments will take a few mins to reflect.</li>
+                <li>There are no additional fees on deposits.</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <script src="finBank.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            displayAccountDetails();
+        });
+    </script>
+</body>
+</html>

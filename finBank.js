@@ -609,6 +609,17 @@ function toggleDetails(index) {
   }
 }
 
+
+function displayAccountDetails() {
+  const currentUser = getCurrentUser();
+  if (currentUser) {
+      document.getElementById('accountHolder').textContent = `${currentUser.firstName} ${currentUser.lastName}`;
+      document.getElementById('accountNumber').textContent = currentUser.accountNum;
+  } else {
+      console.error('No user logged in');
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM fully loaded and parsed");
 
