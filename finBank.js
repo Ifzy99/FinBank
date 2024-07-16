@@ -81,13 +81,6 @@ function signUp() {
   const firstName = document.getElementById("firstName").value;
   const lastName = document.getElementById("lastName").value;
   const middleName = document.getElementById("middleName").value;
-  const gender = document.getElementById("gender").value;
-  const dob = document.getElementById("dob").value;
-  const address = document.getElementById("address").value;
-  const city = document.getElementById("city").value;
-  const state = document.getElementById("state").value;
-  const country = document.getElementById("country").value;
-  const work = document.getElementById("work").value;
   const password = document.getElementById("password").value;
   const pin = document.getElementById("pin").value;
 
@@ -125,13 +118,6 @@ function signUp() {
     firstName,
     lastName,
     middleName,
-    gender,
-    dob,
-    address,
-    city,
-    state,
-    country,
-    work,
     password,
     pin,
     balance: 5000,
