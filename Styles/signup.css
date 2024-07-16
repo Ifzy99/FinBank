@@ -64,7 +64,7 @@
   color: wheat;
   border: none;
   outline: none;
-  box-sizing: border-box; /* Add this line */
+  box-sizing: border-box; 
 }
 
 .input-box {
@@ -77,15 +77,16 @@
   border: none;
   border-radius: 0.5rem;
 }
+
 .name-row {
   display: flex;
   justify-content: space-between;
   width: 20rem;
 }
-
 .name-input {
-  width: 9.5rem; /* Adjust this value as needed */
+  width: 9.5rem;
 }
+
 .password-text {
   margin: 10px auto;
   color: wheat;
